@@ -1,0 +1,43 @@
+'use strict';
+
+{
+    
+  const date1 = document.getElementById('date1');
+  const date2 = document.getElementById('date2');
+  const date3 = document.getElementById('date3');
+  const date4 = document.getElementById('date4');
+  const btn1 = document.getElementById('btn1');
+  const btn2 = document.getElementById('btn2');
+  const btn3 = document.getElementById('btn3');
+  const btn4 = document.getElementById('btn4');
+
+  btn1.addEventListener('click', () => {
+    date1.textContent = '「言葉使いに気を付けて下さい。」';
+    btn2.classList.add('inactive');
+    btn3.classList.add('inactive');
+    btn4.classList.add('inactive');
+  });
+  
+  btn2.addEventListener('click', () => {
+    const d = new Date();
+    date2.textContent = `「今日は、${d.getFullYear()}年${d.getMonth() + 1}月${d.getDate()}日です。」`;
+    btn1.classList.add('inactive');
+    btn3.classList.add('inactive');
+    btn4.classList.add('inactive');
+  });
+
+  btn3.addEventListener('click', () => {
+    date3.textContent = '「ああ、そう・・・」';
+    btn1.classList.add('inactive');
+    btn2.classList.add('inactive');
+    btn4.classList.add('inactive');
+  });
+
+  btn4.addEventListener('click', () => {
+    date4.textContent = '「いえ、別に・・・」';
+    btn1.classList.add('inactive');
+    btn2.classList.add('inactive');
+    btn3.classList.add('inactive');
+  });
+
+}
